@@ -1,0 +1,74 @@
+:root{
+    --width: 400px;
+    --boardWidth: 500px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    overflow-x: hidden;
+}
+.game{
+    width: var(--boardWidth);
+    height: 500px;
+    margin:auto;
+    background:linear-gradient(white,lightblue,blue);
+    border: 1px solid black;
+}
+
+.slider{
+    visibility: hidden;
+    background-color: white;
+    border: 1px solid grey;
+    height: 20px;
+    width: 100px;
+    position: relative;
+}
+#slider1{
+    visibility: visible;
+}
+.animate{
+    animation: side 4s infinite linear;
+}
+@keyframes side{
+    0%{left:0px}
+    50%{left:var(--width)}
+    100%{left:0px}
+}
+
+
+button{
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+    margin: 1rem auto;
+    display: block;
+}
+#btn{
+    background-color: rgb(144, 227, 238);
+}
+#btn:hover, #restart:hover{
+    background-color: rgb(102, 160, 207); 
+}
+#btn:active, #restart:active{
+    background-color: blue;
+}
+#restart{
+    background-color: rgb(10, 119, 245);
+    display: none;
+}
+.winbar{
+    background-color:blue;
+    visibility: visible;
+    width: var(--boardWidth);
+    height: 2px;
+}
+h1{
+    text-align: center;
+    color: rgb(127, 240, 255);
+}
+h2{
+    text-align: left;
+    color: blue;
+}
